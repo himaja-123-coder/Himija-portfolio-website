@@ -37,7 +37,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-gradient-to-br from-indigo-50 via-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={ref} className={`transform transition-all duration-1000 ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
@@ -61,7 +61,7 @@ const Contact = () => {
                   href={contact.href}
                   target={contact.href.startsWith('http') ? '_blank' : '_self'}
                   rel={contact.href.startsWith('http') ? 'noopener noreferrer' : ''}
-                  className="group bg-gradient-to-br from-gray-50 to-gray-100 hover:from-white hover:to-gray-50 rounded-2xl p-6 text-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-blue-200"
+                  className="group bg-gradient-to-br from-white to-indigo-50 hover:from-indigo-50 hover:to-white rounded-2xl p-6 text-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-2 border-indigo-200 hover:border-indigo-300"
                 >
                   <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 ${
                     contact.color === 'green' ? 'bg-green-500' :

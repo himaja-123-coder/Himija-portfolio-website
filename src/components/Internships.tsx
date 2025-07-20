@@ -25,7 +25,7 @@ const Internships = () => {
   ];
 
   return (
-    <section id="internships" className="py-20 bg-gray-50">
+    <section id="internships" className="py-20 bg-gradient-to-br from-orange-50 via-yellow-50 to-red-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={ref} className={`transform transition-all duration-1000 ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
@@ -41,7 +41,7 @@ const Internships = () => {
             {internships.map((internship, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden border-t-4 border-blue-500"
+                className="bg-gradient-to-br from-white to-orange-50 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden border-t-4 border-orange-500"
               >
                 <div className="p-8">
                   <div className="flex items-center mb-4">

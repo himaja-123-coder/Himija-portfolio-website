@@ -5,7 +5,7 @@ const About = () => {
   const [ref, isVisible] = useIntersectionObserver();
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={ref} className={`transform transition-all duration-1000 ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
@@ -29,18 +29,18 @@ const About = () => {
               </p>
               
               <div className="grid grid-cols-2 gap-6 mt-8">
-                <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg">
+                <div className="bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg border border-blue-200">
                   <h3 className="font-semibold text-blue-800 mb-2">Frontend Focus</h3>
                   <p className="text-blue-700 text-sm">Creating responsive, interactive user interfaces</p>
                 </div>
-                <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg">
+                <div className="bg-gradient-to-br from-purple-100 to-purple-200 p-6 rounded-xl shadow-lg border border-purple-200">
                   <h3 className="font-semibold text-purple-800 mb-2">Backend Expertise</h3>
                   <p className="text-purple-700 text-sm">Building robust server-side applications</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl shadow-lg">
+            <div className="bg-gradient-to-br from-teal-50 to-teal-100 p-8 rounded-2xl shadow-xl border border-teal-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Facts</h3>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
