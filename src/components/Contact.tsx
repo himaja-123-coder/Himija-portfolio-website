@@ -63,7 +63,12 @@ const Contact = () => {
                   rel={contact.href.startsWith('http') ? 'noopener noreferrer' : ''}
                   className="group bg-gradient-to-br from-gray-50 to-gray-100 hover:from-white hover:to-gray-50 rounded-2xl p-6 text-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-blue-200"
                 >
-                  <div className={`w-16 h-16 bg-gradient-to-br from-${contact.color}-500 to-${contact.color}-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 ${
+                    contact.color === 'green' ? 'bg-green-500' :
+                    contact.color === 'red' ? 'bg-red-500' :
+                    contact.color === 'blue' ? 'bg-blue-500' :
+                    'bg-gray-600'
+                  }`}>
                     <IconComponent className="text-white" size={28} strokeWidth={2} />
                   </div>
                   <h3 className="font-bold text-gray-900 mb-2">{contact.label}</h3>
