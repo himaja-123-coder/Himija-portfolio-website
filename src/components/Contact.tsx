@@ -64,7 +64,7 @@ const Contact = () => {
                   className="group bg-gradient-to-br from-gray-50 to-gray-100 hover:from-white hover:to-gray-50 rounded-2xl p-6 text-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-blue-200"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br from-${contact.color}-500 to-${contact.color}-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <IconComponent className="text-white" size={24} />
+                    <IconComponent className="text-white" size={28} strokeWidth={2} />
                   </div>
                   <h3 className="font-bold text-gray-900 mb-2">{contact.label}</h3>
                   <p className="text-gray-600 text-sm group-hover:text-blue-600 transition-colors duration-300">
@@ -85,9 +85,9 @@ const Contact = () => {
               </p>
               <a
                 href="mailto:subbireddygarihimaja@gmail.com"
-                className="inline-flex items-center px-6 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors duration-300 font-semibold shadow-lg hover:shadow-xl"
+                className="inline-flex items-center px-6 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
               >
-                <Mail className="mr-2" size={20} />
+                <Mail className="mr-2" size={20} strokeWidth={2} />
                 Send Message
               </a>
             </div>

@@ -48,7 +48,11 @@ const Navigation = () => {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+                className={`${
+                  isScrolled 
+                    ? 'text-gray-700 hover:text-blue-600' 
+                    : 'text-white hover:text-blue-300'
+                } transition-colors duration-200 font-medium`}
               >
                 {item.label}
               </button>
@@ -67,7 +71,11 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+              className={`${
+                isScrolled 
+                  ? 'text-gray-700 hover:text-blue-600' 
+                  : 'text-white hover:text-blue-300'
+              } transition-colors duration-200`}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
