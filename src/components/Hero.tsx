@@ -49,6 +49,29 @@ const Hero = () => {
         <div className={`mb-8 transform transition-all duration-1000 ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
         }`}>
+          <div className="relative inline-block">
+            <div className="w-40 h-40 mx-auto mb-6 relative">
+              {/* Animated gradient border */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-full animate-spin-slow"></div>
+              <div className="absolute inset-1 bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 rounded-full animate-pulse-custom"></div>
+              
+              {/* Profile image */}
+              <img
+                src="/profile-picture.png"
+                alt="Himaja Subbireddy Gari"
+                className="absolute inset-2 w-36 h-36 rounded-full object-cover shadow-2xl hover:scale-110 transition-transform duration-300 animate-float"
+                onError={(e) => {
+                  // Fallback to a placeholder if image doesn't load
+                  e.currentTarget.src = "https://images.pexels.com/photos/3777931/pexels-photo-3777931.jpeg?auto=compress&cs=tinysrgb&w=400";
+                }}
+              />
+              
+              {/* Floating particles around image */}
+              <div className="absolute -top-2 -right-2 w-4 h-4 bg-blue-400 rounded-full animate-bounce-custom opacity-80"></div>
+              <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-purple-400 rounded-full animate-pulse-custom opacity-80"></div>
+              <div className="absolute top-1/2 -right-4 w-2 h-2 bg-pink-400 rounded-full animate-float opacity-80"></div>
+            </div>
+          </div>
         </div>
 
         {/* Name */}
