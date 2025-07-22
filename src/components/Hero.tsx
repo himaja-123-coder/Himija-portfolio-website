@@ -35,12 +35,13 @@ const Hero = () => {
           ))}
         </div>
         {/* Gradient orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-400 to-purple-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-        <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-400 to-pink-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-gradient-to-r from-teal-400 to-blue-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-400 via-purple-600 to-pink-600 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
+        <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-400 via-pink-600 to-red-600 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-gradient-to-r from-teal-400 via-blue-600 to-purple-600 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
         {/* Geometric shapes */}
-        <div className="absolute top-20 right-20 w-20 h-20 border border-blue-400 opacity-20 rotate-45 animate-spin-slow"></div>
-        <div className="absolute bottom-20 left-20 w-16 h-16 border border-purple-400 opacity-20 animate-pulse"></div>
+        <div className="absolute top-20 right-20 w-20 h-20 border border-blue-400 opacity-30 rotate-45 animate-spin-slow"></div>
+        <div className="absolute bottom-20 left-20 w-16 h-16 border border-purple-400 opacity-30 animate-pulse-custom"></div>
+        <div className="absolute top-1/2 right-10 w-12 h-12 border border-pink-400 opacity-30 animate-bounce-custom"></div>
       </div>
 
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
@@ -53,7 +54,7 @@ const Hero = () => {
         {/* Name */}
         <h1 className={`text-4xl sm:text-6xl font-bold mb-4 transform transition-all duration-1000 delay-300 ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-        }`}>
+        } animate-pulse-custom`}>
           <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-teal-400 bg-clip-text text-transparent">
             Himaja Subbireddy Gari
           </span>
@@ -62,7 +63,7 @@ const Hero = () => {
         {/* Tagline */}
         <p className={`text-xl sm:text-2xl text-gray-600 mb-6 transform transition-all duration-1000 delay-500 ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-        }`}>
+        } animate-fadeInScale`}>
           <span className="text-gray-300">
           Aspiring Full Stack Java Developer
           </span>
@@ -71,7 +72,7 @@ const Hero = () => {
         {/* Description */}
         <p className={`text-lg text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed transform transition-all duration-1000 delay-700 ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-        }`}>
+        } animate-slideInUp`}>
           <span className="text-gray-300">
           I'm a detail-oriented Computer Science graduate with a passion for building robust backend systems and interactive web applications.
           </span>
@@ -80,10 +81,10 @@ const Hero = () => {
         {/* CTA Button */}
         <div className={`transform transition-all duration-1000 delay-900 ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-        }`}>
+        } animate-zoomIn`}>
           <button
             onClick={scrollToNext}
-            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+            className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white px-8 py-3 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 animate-pulse-custom hover-lift"
           >
             Explore My Work
           </button>
@@ -91,7 +92,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-custom">
         <ChevronDown size={32} className="text-gray-300" />
       </div>
 

@@ -37,16 +37,21 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-indigo-50 via-white to-blue-50">
+    <section id="contact" className="py-20 bg-gradient-to-br from-rose-50 via-pink-50 to-purple-50 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-16 right-16 w-36 h-36 bg-rose-400 rounded-full animate-float"></div>
+        <div className="absolute bottom-20 left-20 w-32 h-32 bg-pink-400 rounded-full animate-pulse-custom"></div>
+        <div className="absolute top-1/2 right-1/3 w-24 h-24 bg-purple-400 rounded-full animate-bounce-custom"></div>
+      </div>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div ref={ref} className={`transform transition-all duration-1000 ${
-          isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-        }`}>
-          <div className="text-center mb-16">
+        <div ref={ref} className="relative z-10">
+          <div className={`text-center mb-16 ${isVisible ? 'animate-zoomIn' : 'opacity-0'}`}>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Get In <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Touch</span>
+              Get In <span className="bg-gradient-to-r from-rose-600 via-pink-600 to-purple-600 bg-clip-text text-transparent animate-pulse-custom">Touch</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-rose-600 via-pink-600 to-purple-600 mx-auto rounded-full animate-pulse-custom"></div>
             <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
               Ready to collaborate or have questions about my work? I'd love to hear from you!
             </p>
@@ -61,7 +66,8 @@ const Contact = () => {
                   href={contact.href}
                   target={contact.href.startsWith('http') ? '_blank' : '_self'}
                   rel={contact.href.startsWith('http') ? 'noopener noreferrer' : ''}
-                  className="group bg-gradient-to-br from-white to-indigo-50 hover:from-indigo-50 hover:to-white rounded-2xl p-6 text-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-2 border-indigo-200 hover:border-indigo-300"
+                  className={`group bg-gradient-to-br from-white to-rose-50 hover:from-rose-50 hover:to-white rounded-2xl p-6 text-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-2 border-rose-200 hover:border-rose-300 hover-lift hover-glow ${isVisible ? 'animate-slideInUp' : 'opacity-0'}`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 ${
                     contact.color === 'green' ? 'bg-green-500' :
@@ -69,7 +75,7 @@ const Contact = () => {
                     contact.color === 'blue' ? 'bg-blue-500' :
                     'bg-gray-600'
                   }`}>
-                    <IconComponent className="text-white" size={28} strokeWidth={2} />
+                    <IconComponent className="text-white animate-bounce-custom" size={28} strokeWidth={2} />
                   </div>
                   <h3 className="font-bold text-gray-900 mb-2">{contact.label}</h3>
                   <p className="text-gray-600 text-sm group-hover:text-blue-600 transition-colors duration-300">
@@ -81,18 +87,18 @@ const Contact = () => {
           </div>
 
           {/* Call to Action */}
-          <div className="mt-16 text-center">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white max-w-4xl mx-auto">
-              <Send className="mx-auto mb-4" size={48} />
-              <h3 className="text-2xl font-bold mb-4">Let's Work Together</h3>
+          <div className={`mt-16 text-center ${isVisible ? 'animate-zoomIn' : 'opacity-0'}`}>
+            <div className="bg-gradient-to-r from-rose-600 via-pink-600 to-purple-600 rounded-2xl p-8 text-white max-w-4xl mx-auto hover-lift">
+              <Send className="mx-auto mb-4 animate-float" size={48} />
+              <h3 className="text-2xl font-bold mb-4 animate-pulse-custom">Let's Work Together</h3>
               <p className="text-lg opacity-90 mb-6">
                 I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology.
               </p>
               <a
                 href="mailto:subbireddygarihimaja@gmail.com"
-                className="inline-flex items-center px-6 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="inline-flex items-center px-6 py-3 bg-white text-rose-600 rounded-lg hover:bg-gray-100 transition-colors duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 hover-lift animate-pulse-custom"
               >
-                <Mail className="mr-2" size={20} strokeWidth={2} />
+                <Mail className="mr-2 animate-bounce-custom" size={20} strokeWidth={2} />
                 Send Message
               </a>
             </div>
