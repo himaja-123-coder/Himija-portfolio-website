@@ -36,6 +36,13 @@ const Skills = () => {
       skills: ["Problem-solving", "Public Speaking", "Team Collaboration"],
       color: "teal"
     }
+    ,
+    {
+      title: "Natural Skills",
+      icon: Lightbulb,
+      skills: ["Critical Thinking", "Adaptability", "Time Management", "Communication", "Leadership"],
+      color: "indigo"
+    }
   ];
 
   return (
