@@ -75,7 +75,7 @@ const Contact = () => {
                     contact.color === 'blue' ? 'bg-blue-500' :
                     'bg-gray-600'
                   }`}>
-                    <IconComponent className="text-white animate-bounce-custom" size={28} strokeWidth={2} />
+                    <IconComponent className="text-white" size={28} strokeWidth={2} />
                   </div>
                   <h3 className="font-bold text-gray-900 mb-2">{contact.label}</h3>
                   <p className="text-gray-600 text-sm group-hover:text-blue-600 transition-colors duration-300">
@@ -89,16 +89,16 @@ const Contact = () => {
           {/* Call to Action */}
           <div className={`mt-16 text-center ${isVisible ? 'animate-zoomIn' : 'opacity-0'}`}>
             <div className="bg-gradient-to-r from-rose-600 via-pink-600 to-purple-600 rounded-2xl p-8 text-white max-w-4xl mx-auto hover-lift">
-              <Send className="mx-auto mb-4 animate-float" size={48} />
-              <h3 className="text-2xl font-bold mb-4 animate-pulse-custom">Let's Work Together</h3>
+              <Send className="mx-auto mb-4" size={48} />
+              <h3 className="text-2xl font-bold mb-4">Let's Work Together</h3>
               <p className="text-lg opacity-90 mb-6">
                 I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology.
               </p>
               <a
                 href="mailto:subbireddygarihimaja@gmail.com"
-                className="inline-flex items-center px-6 py-3 bg-white text-rose-600 rounded-lg hover:bg-gray-100 transition-colors duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 hover-lift animate-pulse-custom"
+                className="inline-flex items-center px-6 py-3 bg-white text-rose-600 rounded-lg hover:bg-gray-100 transition-colors duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 hover-lift"
               >
-                <Mail className="mr-2 animate-bounce-custom" size={20} strokeWidth={2} />
+                <Mail className="mr-2" size={20} strokeWidth={2} />
                 Send Message
               </a>
             </div>

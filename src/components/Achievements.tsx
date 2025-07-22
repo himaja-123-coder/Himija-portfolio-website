@@ -41,10 +41,10 @@ const Achievements = () => {
                   className={`bg-gradient-to-br from-white via-yellow-50 to-orange-50 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden border-l-4 border-yellow-500 hover-lift hover-glow ${isVisible ? 'animate-slideInUp' : 'opacity-0'}`}
                 >
                   <div className="p-8 text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse-custom">
-                      <IconComponent className="text-white animate-bounce-custom" size={32} />
+                    <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <IconComponent className="text-white" size={32} />
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4 animate-pulse-custom">{achievement.title}</h3>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">{achievement.title}</h3>
                     <p className="text-gray-700 leading-relaxed">{achievement.description}</p>
                   </div>
                 </div>
@@ -54,8 +54,8 @@ const Achievements = () => {
 
           <div className={`mt-16 text-center ${isVisible ? 'animate-zoomIn' : 'opacity-0'}`}>
             <div className="bg-gradient-to-r from-yellow-600 via-orange-600 to-red-600 rounded-2xl p-8 text-white max-w-4xl mx-auto hover-lift">
-              <Award className="mx-auto mb-4 animate-float" size={48} />
-              <h3 className="text-2xl font-bold mb-4 animate-pulse-custom">Beyond Academics</h3>
+              <Award className="mx-auto mb-4" size={48} />
+              <h3 className="text-2xl font-bold mb-4">Beyond Academics</h3>
               <p className="text-lg opacity-90">
                 Believing in holistic development, I actively participate in sports and extracurricular activities 
                 to maintain a healthy work-life balance and develop teamwork skills.

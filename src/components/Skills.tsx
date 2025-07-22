@@ -10,38 +10,56 @@ const Skills = () => {
       title: "Programming",
       icon: Code,
       skills: ["Java", "Core Java", "JDBC", "OOP", "SDLC"],
-      color: "blue"
+      color: "blue",
+      bgGradient: "from-blue-500 to-blue-600",
+      cardGradient: "from-white via-blue-50 to-blue-100",
+      borderColor: "border-blue-200"
     },
     {
       title: "Web Development",
       icon: Globe,
       skills: ["HTML", "CSS", "JavaScript"],
-      color: "green"
+      color: "emerald",
+      bgGradient: "from-emerald-500 to-emerald-600",
+      cardGradient: "from-white via-emerald-50 to-emerald-100",
+      borderColor: "border-emerald-200"
     },
     {
       title: "Database",
       icon: Database,
       skills: ["MySQL", "DBMS"],
-      color: "purple"
+      color: "purple",
+      bgGradient: "from-purple-500 to-purple-600",
+      cardGradient: "from-white via-purple-50 to-purple-100",
+      borderColor: "border-purple-200"
     },
     {
       title: "Tools",
       icon: Settings,
       skills: ["Git", "Eclipse", "VS Code"],
-      color: "orange"
+      color: "orange",
+      bgGradient: "from-orange-500 to-orange-600",
+      cardGradient: "from-white via-orange-50 to-orange-100",
+      borderColor: "border-orange-200"
     },
     {
       title: "Soft Skills",
       icon: Users,
       skills: ["Problem-solving", "Public Speaking", "Team Collaboration"],
-      color: "teal"
+      color: "teal",
+      bgGradient: "from-teal-500 to-teal-600",
+      cardGradient: "from-white via-teal-50 to-teal-100",
+      borderColor: "border-teal-200"
     }
     ,
     {
       title: "Natural Skills",
       icon: Lightbulb,
       skills: ["Critical Thinking", "Adaptability", "Time Management", "Communication", "Leadership"],
-      color: "indigo"
+      color: "rose",
+      bgGradient: "from-rose-500 to-rose-600",
+      cardGradient: "from-white via-rose-50 to-rose-100",
+      borderColor: "border-rose-200"
     }
   ];
 
@@ -69,15 +87,15 @@ const Skills = () => {
               return (
                 <div
                   key={index}
-                  className={`bg-gradient-to-br from-white via-${category.color}-50 to-${category.color}-100 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden border border-${category.color}-200 hover-lift hover-glow ${isVisible ? 'animate-slideInUp' : 'opacity-0'}`}
+                  className={`bg-gradient-to-br ${category.cardGradient} rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden border ${category.borderColor} hover-lift hover-glow ${isVisible ? 'animate-slideInUp' : 'opacity-0'}`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="p-6">
                     <div className="flex items-center mb-4">
-                      <div className={`w-12 h-12 bg-gradient-to-br from-${category.color}-500 to-${category.color}-600 rounded-lg flex items-center justify-center mr-4 animate-pulse-custom`}>
-                        <IconComponent className="text-white animate-bounce-custom" size={24} />
+                       <div className={`w-12 h-12 bg-gradient-to-br ${category.bgGradient} rounded-lg flex items-center justify-center mr-4`}>
+                         <IconComponent className="text-white" size={24} />
                       </div>
-                      <h3 className="text-xl font-bold text-gray-900 animate-pulse-custom">{category.title}</h3>
+                       <h3 className="text-xl font-bold text-gray-900">{category.title}</h3>
                     </div>
 
                     <div className="space-y-2">
@@ -87,7 +105,7 @@ const Skills = () => {
                           className={`bg-white px-4 py-2 rounded-lg shadow-sm border-l-4 border-${category.color}-500 hover:bg-${category.color}-50 transition-colors duration-200 hover-lift animate-slideInRight`}
                           style={{ animationDelay: `${idx * 0.1}s` }}
                         >
-                          <span className="text-gray-800 font-medium animate-pulse-custom">{skill}</span>
+                           <span className="text-gray-800 font-medium">{skill}</span>
                         </div>
                       ))}
                     </div>

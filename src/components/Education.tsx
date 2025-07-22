@@ -67,15 +67,15 @@ const Education = () => {
                   <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
                     <div className={`bg-gradient-to-br from-white to-${edu.color}-50 p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-l-4 border-${edu.color}-500 hover-lift hover-glow`}>
                       <div className="flex items-center mb-3">
-                        <GraduationCap className={`text-${edu.color}-500 mr-3 animate-bounce-custom`} size={24} />
+                        <GraduationCap className={`text-${edu.color}-500 mr-3`} size={24} />
                         <span className={`text-${edu.color}-600 font-semibold text-sm`}>{edu.period}</span>
                       </div>
                       
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 animate-pulse-custom">{edu.degree}</h3>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">{edu.degree}</h3>
                       <p className="text-gray-600 mb-3">{edu.institution}</p>
                       
                       <div className="flex items-center">
-                        <Award className={`text-${edu.color}-500 mr-2 animate-float`} size={20} />
+                        <Award className={`text-${edu.color}-500 mr-2`} size={20} />
                         <span className="font-semibold text-gray-800">CGPA: {edu.cgpa}</span>
                       </div>
                     </div>

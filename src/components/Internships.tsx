@@ -51,17 +51,17 @@ const Internships = () => {
               >
                 <div className="p-8">
                   <div className="flex items-center mb-4">
-                    <div className={`w-12 h-12 bg-gradient-to-br from-${internship.color}-500 to-${internship.color}-600 rounded-lg flex items-center justify-center mr-4 animate-pulse-custom`}>
-                      <Briefcase className="text-white animate-bounce-custom" size={24} />
+                    <div className={`w-12 h-12 bg-gradient-to-br from-${internship.color}-500 to-${internship.color}-600 rounded-lg flex items-center justify-center mr-4`}>
+                      <Briefcase className="text-white" size={24} />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 animate-pulse-custom">{internship.title}</h3>
+                      <h3 className="text-xl font-bold text-gray-900">{internship.title}</h3>
                       <p className={`text-${internship.color}-600 font-semibold`}>{internship.company}</p>
                     </div>
                   </div>
 
                   <div className="flex items-center mb-4 text-gray-600">
-                    <Calendar className="mr-2 animate-float" size={16} />
+                    <Calendar className="mr-2" size={16} />
                     <span className="text-sm">{internship.period}</span>
                   </div>
 

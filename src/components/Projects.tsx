@@ -46,23 +46,23 @@ const Projects = () => {
               >
                 <div className="p-8">
                   <div className="flex items-center mb-4">
-                    <div className={`w-12 h-12 bg-gradient-to-br from-${project.color}-500 to-${project.color}-600 rounded-lg flex items-center justify-center mr-4 animate-pulse-custom`}>
-                      <Code className="text-white animate-bounce-custom" size={24} />
+                    <div className={`w-12 h-12 bg-gradient-to-br from-${project.color}-500 to-${project.color}-600 rounded-lg flex items-center justify-center mr-4`}>
+                      <Code className="text-white" size={24} />
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 animate-pulse-custom">{project.title}</h3>
+                    <h3 className="text-2xl font-bold text-gray-900">{project.title}</h3>
                   </div>
 
                   <p className="text-gray-700 mb-6 leading-relaxed">{project.description}</p>
 
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
-                      <Database className="mr-2 text-blue-600 animate-float" size={20} />
+                      <Database className="mr-2 text-blue-600" size={20} />
                       Key Features
                     </h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                       {project.features.map((feature, idx) => (
                         <div key={idx} className={`flex items-center text-gray-700 ${isVisible ? 'animate-slideInLeft' : 'opacity-0'}`} style={{ animationDelay: `${idx * 0.1}s` }}>
-                          <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse-custom"></div>
+                          <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
                           {feature}
                         </div>
                       ))}
@@ -86,7 +86,7 @@ const Projects = () => {
 
                   <div className="flex space-x-4">
                     <button className="flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-md hover:shadow-lg hover-lift animate-pulse-custom">
-                      <Github className="mr-2 animate-bounce-custom" size={18} />
+                      <Github className="mr-2" size={18} />
                       View Code
                     </button>
                   </div>
